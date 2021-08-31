@@ -2,6 +2,8 @@ const { AuthenticationError } = require('apollo-server-express');
 const { User } = require('../models');
 const { signToken } = require('../utils/auth');
 
+console.log(User)
+
 const resolvers = {
   Query: {
     me: async (parent, args, context) => {
@@ -39,6 +41,7 @@ const resolvers = {
       return { token, user };
     },
     saveBook: async (parent, { bookData }, context) => {
+      
       if (context.user) {
         const updatedUser = await User.findByIdAndUpdate(
           { _id: context.user._id },
@@ -48,8 +51,8 @@ const resolvers = {
 
         return updatedUser;
       }
-
-      throw new AuthenticationError('You need to be logged in!');
+      
+      throw new AuthenticationError('You need to be logged in SISISIS!');
     },
     removeBook: async (parent, { bookId }, context) => {
       if (context.user) {
