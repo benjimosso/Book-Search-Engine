@@ -2,11 +2,11 @@
 # DESCRIPTION
 ### In this assigment I created a Book Search Engine Application. 
 ### This is some of the requirements:
-    ```md
+
 AS AN avid reader
 I WANT to search for new books to read
 SO THAT I can keep a list of books to purchase
-```
+
 
 GITHUB Repository:
 https://github.com/benjimosso/Book-Search-Engine
